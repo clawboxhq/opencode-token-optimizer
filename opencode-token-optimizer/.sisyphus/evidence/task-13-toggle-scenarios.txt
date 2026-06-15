@@ -1,0 +1,10 @@
+T13 Evidence: All toggle scenarios pass
+========================================
+Ran: bun test src/__tests__/integration.test.ts -t "individual pattern toggles"
+Result: 6 pass, 0 fail
+- quickCategoryRouting only: registers config hook exclusively ✓
+- precisePrompts only: registers system transform hook ✓
+- preComputationGuidance only: registers system transform hook ✓
+- cutExploreAgent only: registers system transform hook ✓
+- antiDuplication only: registers tool hooks and custom tools ✓
+- singleConcernDelegation only: registers validate_task_scope tool ✓

@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from "fs";
 import { join } from "path";
-import { homedir } from "os";
+import { homedir as osHomedir } from "os";
 
 export interface PluginConfig {
   precisePrompts: boolean;
@@ -27,7 +27,7 @@ export class ConfigManager {
   private configDir: string;
 
   constructor(configDir?: string) {
-    this.configDir = configDir ?? join(homedir(), ".config", "opencode");
+    this.configDir = configDir ?? join(process.env.HOME || osHomedir(), ".config", "opencode");
     this.config = this.load();
   }
 

@@ -1,0 +1,12 @@
+T14 Evidence: All 6 patterns documented
+========================================
+Ran: for pattern in "Precise.*Prompts" "Anti.*Duplication" "Single.*Concern"
+     "Quick.*Routing" "Pre.*Computation" "Cut.*Explore"; do grep -q ...
+Result:
+- FOUND: Precise.*Prompts ✓
+- FOUND: Anti.*Duplication ✓
+- FOUND: Single.*Concern ✓
+- FOUND: Quick.*Routing ✓
+- FOUND: Pre.*Computation ✓
+- FOUND: Cut.*Explore ✓
+All 6 patterns documented ✓
