@@ -1,0 +1,10 @@
+T12 Evidence: Measurement script runs without errors
+====================================================
+Ran: bun run scripts/measure-token-savings.ts
+Result: Exit code 0
+- All 5 scenarios measured ✓
+- classifyComplexity imported and used ✓
+- estimateTokens imported and used ✓
+- Table output with all columns ✓
+- Weighted total savings: 39.3% ✓
+- Results appended to evidence file ✓
