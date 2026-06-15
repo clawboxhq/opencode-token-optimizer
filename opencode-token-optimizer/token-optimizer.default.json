@@ -1,0 +1,10 @@
+{
+  "patterns": {
+    "precisePrompts": true,
+    "antiDuplication": true,
+    "singleConcernDelegation": true,
+    "quickCategoryRouting": true,
+    "preComputationGuidance": true,
+    "cutExploreAgent": true
+  }
+}

@@ -1,0 +1,20 @@
+bun test v1.3.11 (af24e281)
+
+src/__tests__/config.test.ts:
+(pass) getDefaultConfig > returns all patterns enabled [0.06ms]
+(pass) ConfigManager > loads from valid JSON file [1.30ms]
+[token-optimizer] Config file not found at /var/folders/0r/r8rfmnl10194v701njh37ybm0000gn/T/token-opt-test-szNkbu/token-optimizer.json, using defaults
+(pass) ConfigManager > returns defaults when file missing
+[token-optimizer] Failed to load config: SyntaxError: JSON Parse error: Unexpected identifier "not"
+      at load (/Users/vinceyap/Shares/tools/agentic-projects/opencode-token-optimizer/opencode-token-optimizer/src/config.ts:52:27)
+      at new ConfigManager (/Users/vinceyap/Shares/tools/agentic-projects/opencode-token-optimizer/opencode-token-optimizer/src/config.ts:31:24)
+      at <anonymous> (/Users/vinceyap/Shares/tools/agentic-projects/opencode-token-optimizer/opencode-token-optimizer/src/__tests__/config.test.ts:77:23)
+
+(pass) ConfigManager > returns defaults when file has invalid JSON [0.63ms]
+(pass) ConfigManager > respects per-pattern overrides in file [0.23ms]
+(pass) ConfigManager > isEnabled returns correct value for pattern [0.22ms]
+
+ 6 pass
+ 0 fail
+ 33 expect() calls
+Ran 6 tests across 1 file. [11.00ms]
