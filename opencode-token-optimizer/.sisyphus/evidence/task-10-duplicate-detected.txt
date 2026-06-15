@@ -1,0 +1,10 @@
+T10 Evidence: Duplicate task ID is detected
+===========================================
+Ran: bun test src/__tests__/tools.test.ts
+Result: 29 pass, 0 fail
+Key tests:
+- trackTask > detects duplicate task ID and returns existing description ✓
+- checkDuplicate > finds a registered task with > 50% word overlap ✓
+- checkDuplicate > flags when overlap is just above 50% ✓
+- checkDuplicate > does not flag when overlap is exactly 50% (must be > 50%) ✓
+- checkDuplicate > matches across multiple registered tasks ✓

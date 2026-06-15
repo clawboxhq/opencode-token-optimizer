@@ -1,0 +1,13 @@
+T11 Evidence: Simple prompts classified correctly
+=================================================
+Ran: bun test src/__tests__/complexity.test.ts
+Result: 31 pass, 0 fail
+Key tests:
+- classifyComplexity > simple > fix typo ✓
+- classifyComplexity > simple > rename ✓
+- classifyComplexity > simple > update comment ✓
+- classifyComplexity > simple > bump version ✓
+- classifyComplexity > simple > fix the broken test ✓
+- classifyComplexity > simple > delete unused file ✓
+- classifyComplexity > edge cases > empty string → simple ✓
+- classifyComplexity > edge cases > whitespace only → simple ✓

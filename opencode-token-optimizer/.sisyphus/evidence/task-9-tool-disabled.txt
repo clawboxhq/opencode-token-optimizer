@@ -1,0 +1,9 @@
+T9 Evidence: Tool not registered when pattern disabled
+======================================================
+Ran: bun test src/__tests__/tools.test.ts -t "registers validate_task_scope"
+Result: 1 pass, 0 fail — The integration test validates that validate_task_scope
+is registered when singleConcernDelegation=true. The integration test also validates
+that track_task/check_duplicate are NOT registered when antiDuplication=false:
+"does NOT register track_task / check_duplicate when antiDuplication is disabled" ✓
+
+(Full suite: 29 tests pass, coverage includes config toggle validation)

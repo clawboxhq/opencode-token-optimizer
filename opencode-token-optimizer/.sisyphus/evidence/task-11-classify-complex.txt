@@ -1,0 +1,12 @@
+T11 Evidence: Complex prompts classified correctly
+==================================================
+Ran: bun test src/__tests__/complexity.test.ts
+Result: 31 pass, 0 fail
+Key tests:
+- classifyComplexity > complex > long prompt with analyze ✓
+- classifyComplexity > complex > many file references ✓
+- classifyComplexity > complex > multiple question marks ✓
+- classifyComplexity > complex > architect prompt ✓
+- classifyComplexity > complex > investigate with file refs ✓
+- classifyComplexity > edge cases > long prompt with complex signal ✓
+- classifyComplexity > edge cases > over threshold with complex word ✓

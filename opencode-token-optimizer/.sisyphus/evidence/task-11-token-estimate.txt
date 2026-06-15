@@ -1,0 +1,14 @@
+T11 Evidence: Token estimation matches expected range
+=====================================================
+Ran: bun test src/__tests__/complexity.test.ts
+Result: 31 pass, 0 fail
+Key tests:
+- estimateTokens > empty string → 0 ✓
+- estimateTokens > whitespace only → 0 ✓
+- estimateTokens > single word → 2 ✓
+- estimateTokens > two words → 3 ✓
+- estimateTokens > 10 words → 13 ✓
+- estimateTokens > within 20% tolerance ✓
+- estimateTokens > handles multiple spaces ✓
+- estimateTokens > handles leading/trailing whitespace ✓
+- estimateTokens > long text scales proportionally ✓

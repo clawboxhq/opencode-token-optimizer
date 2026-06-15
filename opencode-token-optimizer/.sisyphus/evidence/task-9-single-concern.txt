@@ -1,0 +1,10 @@
+T9 Evidence: Single-concern prompt passes validation
+==================================================
+Ran: bun test src/__tests__/tools.test.ts
+Result: 29 pass, 0 fail (all tools tests pass)
+Key tests:
+- validateTaskScope > passes for single-concern prompt (no delimiters) ✓
+- validateTaskScope > passes for single-concern prompt with multiple steps ✓
+- validateTaskScope > passes for empty string ✓
+- validateTaskScope > passes for whitespace-only prompt ✓
+- validateTaskScope > does not split on lowercase 'and' (not all-caps) ✓
