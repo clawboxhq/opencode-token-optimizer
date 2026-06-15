@@ -21,9 +21,10 @@ const plugin: Plugin = async (_ctx) => {
 
   // T3 — quick routing: config hook
   if (configManager.isEnabled("quickCategoryRouting")) {
-    hooks.config = safeHook("config", async (_input: Config) => {
-      // T3 will implement quick routing logic here
-    });
+    const { categoryRoutingHook } = await import(
+      "./patterns/quick-routing.js"
+    );
+    hooks.config = safeHook("config", categoryRoutingHook);
   }
 
   // T5/T6/T7/T8 — system prompt modifications
