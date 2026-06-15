@@ -1,0 +1,12 @@
+T10 — Anti-Duplication Guard: Duplicate Detection
+
+Test case: trackTask detects duplicate task ID and returns existing description
+
+Scenario:
+1. Register task-1 with description "fix the button"
+2. Try to register task-1 again with a different description
+
+Expected: { duplicate: true, existingTask: "fix the button" }
+Actual:   { duplicate: true, existingTask: "fix the button" }
+
+Result: PASS

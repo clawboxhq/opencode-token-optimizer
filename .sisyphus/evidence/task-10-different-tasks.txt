@@ -1,0 +1,19 @@
+T10 — Anti-Duplication Guard: Different Tasks
+
+Test case: allows different task IDs with the same description (not duplicates)
+
+Scenario:
+1. Register task-1 with description "fix the button"
+2. Register task-2 with description "fix the button"
+
+Expected: { duplicate: false }
+Actual:   { duplicate: false }
+
+Also verified: checkDuplicate with unrelated tasks
+1. Register "implement authentication"
+2. Query: "fix button styling"
+
+Expected: { isDuplicate: false }
+Actual:   { isDuplicate: false }
+
+Result: PASS

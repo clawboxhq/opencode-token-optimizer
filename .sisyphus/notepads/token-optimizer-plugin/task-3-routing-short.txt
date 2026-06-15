@@ -1,0 +1,20 @@
+bun test v1.3.11 (af24e281)
+
+src/__tests__/quick-routing.test.ts:
+(pass) shouldRouteToQuick > routes to quick when prompt is under 100 characters [0.13ms]
+(pass) shouldRouteToQuick > routes to quick for a 50-character prompt [0.03ms]
+(pass) shouldRouteToQuick > does NOT route to quick for prompts >= 100 characters
+(pass) shouldRouteToQuick > routes to quick when prompt contains a routing pattern [0.03ms]
+(pass) shouldRouteToQuick > routes to quick for 'rename' pattern
+(pass) shouldRouteToQuick > routes to quick for 'update comment' pattern
+(pass) shouldRouteToQuick > routes to quick for 'bump version' pattern
+(pass) shouldRouteToQuick > is case-insensitive for pattern matching
+(pass) shouldRouteToQuick > does NOT route to quick when prompt is long and has no matching pattern
+(pass) shouldRouteToQuick > routes to quick for empty or very short strings
+[token-optimizer] Loaded 1 categories from oh-my-openagent.json
+[token-optimizer] Injected quick routing rules (maxPromptChars=100, 4 patterns)
+(pass) categoryRoutingHook > injects quick routing rules into config.experimental.category_routing [1.03ms]
+[token-optimizer] 'quick' category not found — skipping routing injection
+(pass) categoryRoutingHook > handles missing oh-my-openagent.json gracefully (no crash) [0.18ms]
+[token-optimizer] Loaded 1 categories from oh-my-openagent.json
+[token-optimizer] 'quick' category not found — skipping routing injection

@@ -1,0 +1,6 @@
+T9 Evidence: Single-concern prompt validation
+=============================================
+Command: validateTaskScope({ prompt: "Fix the button alignment in the header" })
+Result:  { valid: true, concerns: [], suggestion: "" }
+Expected: Single concern passes validation
+Status:  PASS

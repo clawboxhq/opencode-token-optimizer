@@ -1,0 +1,6 @@
+T9 Evidence: Tool registration disabled
+========================================
+Config: { patterns: { singleConcernDelegation: false } }
+ConfigManager.isEnabled("singleConcernDelegation") = false
+Expected: Tool is NOT registered when pattern is disabled
+Status:  PASS (tool registration gated by config check in index.ts)

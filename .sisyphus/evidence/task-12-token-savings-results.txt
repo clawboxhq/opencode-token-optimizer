@@ -116,3 +116,121 @@ Weighted total savings: 39.3%  ✅ PASS (≥25%)
     Savings         : 19.4%
 
 --- End of report ---
+========================================================================
+  Token Savings Measurement Report
+========================================================================
+
+#   Scenario                     Baseline   Optimized  Savings    Class    Est.Tok   
+-------------------------------------------------------------------------------------
+1   Fix login button typo        12000      4000       66.7%      simple   12        
+2   Add logout functionality     45000      28000      37.8%      medium   21        
+3   Refactor auth module         89000      62000      30.3%      medium   17        
+4   Find all TODO comments       34000      2000       94.1%      medium   19        
+5   Explain data pipeline        67000      54000      19.4%      complex  20        
+-------------------------------------------------------------------------------------
+    TOTAL                        247000     150000     39.3%                         
+
+Weighted total savings: 39.3%  ✅ PASS (≥25%)
+
+--- Per-Scenario Detail (estimateTokens heuristic shown) ---
+
+  Fix login button typo:
+    Prompt          : "fix typo in login button text on the homepage"
+    estimateTokens  : 12 tokens
+    classifyComplexity : simple
+    Baseline tokens : 12000
+    Optimized tokens: 4000
+    Savings         : 66.7%
+
+  Add logout functionality:
+    Prompt          : "add a logout button to the header component and wire it up with the auth service"
+    estimateTokens  : 21 tokens
+    classifyComplexity : medium
+    Baseline tokens : 45000
+    Optimized tokens: 28000
+    Savings         : 37.8%
+
+  Refactor auth module:
+    Prompt          : "refactor the authentication module to use JWT tokens and add refresh token rotation"
+    estimateTokens  : 17 tokens
+    classifyComplexity : medium
+    Baseline tokens : 89000
+    Optimized tokens: 62000
+    Savings         : 30.3%
+
+  Find all TODO comments:
+    Prompt          : "find all TODO comments in the src directory and list them with line numbers"
+    estimateTokens  : 19 tokens
+    classifyComplexity : medium
+    Baseline tokens : 34000
+    Optimized tokens: 2000
+    Savings         : 94.1%
+
+  Explain data pipeline:
+    Prompt          : "analyze and explain the data pipeline architecture across all services including ingestion, transformation, and delivery"
+    estimateTokens  : 20 tokens
+    classifyComplexity : complex
+    Baseline tokens : 67000
+    Optimized tokens: 54000
+    Savings         : 19.4%
+
+--- End of report ---
+========================================================================
+  Token Savings Measurement Report
+========================================================================
+
+#   Scenario                     Baseline   Optimized  Savings    Class    Est.Tok   
+-------------------------------------------------------------------------------------
+1   Fix login button typo        12000      4000       66.7%      simple   12        
+2   Add logout functionality     45000      28000      37.8%      medium   21        
+3   Refactor auth module         89000      62000      30.3%      medium   17        
+4   Find all TODO comments       34000      2000       94.1%      medium   19        
+5   Explain data pipeline        67000      54000      19.4%      complex  20        
+-------------------------------------------------------------------------------------
+    TOTAL                        247000     150000     39.3%                         
+
+Weighted total savings: 39.3%  ✅ PASS (≥25%)
+
+--- Per-Scenario Detail (estimateTokens heuristic shown) ---
+
+  Fix login button typo:
+    Prompt          : "fix typo in login button text on the homepage"
+    estimateTokens  : 12 tokens
+    classifyComplexity : simple
+    Baseline tokens : 12000
+    Optimized tokens: 4000
+    Savings         : 66.7%
+
+  Add logout functionality:
+    Prompt          : "add a logout button to the header component and wire it up with the auth service"
+    estimateTokens  : 21 tokens
+    classifyComplexity : medium
+    Baseline tokens : 45000
+    Optimized tokens: 28000
+    Savings         : 37.8%
+
+  Refactor auth module:
+    Prompt          : "refactor the authentication module to use JWT tokens and add refresh token rotation"
+    estimateTokens  : 17 tokens
+    classifyComplexity : medium
+    Baseline tokens : 89000
+    Optimized tokens: 62000
+    Savings         : 30.3%
+
+  Find all TODO comments:
+    Prompt          : "find all TODO comments in the src directory and list them with line numbers"
+    estimateTokens  : 19 tokens
+    classifyComplexity : medium
+    Baseline tokens : 34000
+    Optimized tokens: 2000
+    Savings         : 94.1%
+
+  Explain data pipeline:
+    Prompt          : "analyze and explain the data pipeline architecture across all services including ingestion, transformation, and delivery"
+    estimateTokens  : 20 tokens
+    classifyComplexity : complex
+    Baseline tokens : 67000
+    Optimized tokens: 54000
+    Savings         : 19.4%
+
+--- End of report ---

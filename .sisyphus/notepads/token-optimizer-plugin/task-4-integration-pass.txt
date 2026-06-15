@@ -1,0 +1,26 @@
+bun test v1.3.11 (af24e281)
+
+src/__tests__/integration.test.ts:
+[token-optimizer] Config file not found at /Users/vinceyap/.config/opencode/token-optimizer.json, using defaults
+(pass) token-optimizer plugin integration > can be imported and instantiated without error [1.02ms]
+[token-optimizer] Config file not found at /Users/vinceyap/.config/opencode/token-optimizer.json, using defaults
+[token-optimizer] Loaded 8 categories from oh-my-openagent.json
+[token-optimizer] Injected quick routing rules (maxPromptChars=100, 4 patterns)
+(pass) token-optimizer plugin integration > all registered hooks complete without throwing [0.42ms]
+[token-optimizer] Config file not found at /Users/vinceyap/.config/opencode/token-optimizer.json, using defaults
+[token-optimizer] Loaded 8 categories from oh-my-openagent.json
+[token-optimizer] Injected quick routing rules (maxPromptChars=100, 4 patterns)
+[token-optimizer] Loaded 8 categories from oh-my-openagent.json
+[token-optimizer] Injected quick routing rules (maxPromptChars=100, 4 patterns)
+[token-optimizer] Loaded 8 categories from oh-my-openagent.json
+[token-optimizer] Injected quick routing rules (maxPromptChars=100, 4 patterns)
+(pass) token-optimizer plugin integration > config hook does not crash when given a mock Config object [0.21ms]
+(pass) token-optimizer plugin integration > handles missing config file gracefully (uses defaults, no crash) [0.14ms]
+(pass) token-optimizer plugin integration > handles invalid config JSON gracefully (logs warning, uses defaults) [0.54ms]
+(pass) token-optimizer plugin integration > fires tool.execute.before hook for a mock tool registered by another plugin [0.06ms]
+(pass) token-optimizer plugin integration > returns a system prompt array (not null/undefined) when invoked [0.07ms]
+
+ 7 pass
+ 0 fail
+ 37 expect() calls
+Ran 7 tests across 1 file. [12.00ms]

@@ -1,0 +1,9 @@
+=== ConfigManager with quickCategoryRouting disabled ===
+
+When quickCategoryRouting=false, the config hook is NOT registered:
+  - ConfigManager.isEnabled('quickCategoryRouting') returns false
+  - categoryRoutingHook is never called
+  - Config object remains unchanged
+
+=== Test: categoryRoutingHook is registered only when quickCategoryRouting is enabled ===
+PASS

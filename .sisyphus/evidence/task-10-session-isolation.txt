@@ -1,0 +1,18 @@
+T10 — Anti-Duplication Guard: Session Isolation via _resetTaskRegistry
+
+Test case: _resetTaskRegistry clears all registered tasks
+
+Scenario:
+1. Register task-1 with description "fix the button"
+2. Call _resetTaskRegistry()
+3. Register task-1 again (should succeed, not detect as duplicate)
+
+Expected: { duplicate: false } (fresh session)
+Actual:   { duplicate: false } (fresh session)
+
+Also verified: checkDuplicate after reset with no false positives
+1. Register "fix the login button"
+2. Call _resetTaskRegistry()
+3. Query: "fix the button" → { isDuplicate: false }
+
+Result: PASS

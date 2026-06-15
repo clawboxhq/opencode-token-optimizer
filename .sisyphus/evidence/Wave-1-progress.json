@@ -1,0 +1,10 @@
+{
+  "wave": 1,
+  "started_at": "2026-06-15T14:15:10.948Z",
+  "tasks": {
+    "T1": { "status": "in_progress", "subtasks_completed": 0, "subtasks_total": 8 },
+    "T2": { "status": "in_progress", "subtasks_completed": 0, "subtasks_total": 7 },
+    "T3": { "status": "pending", "subtasks_total": 5 },
+    "T4": { "status": "pending", "subtasks_total": 6 }
+  }
+}

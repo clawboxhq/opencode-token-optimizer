@@ -1,0 +1,6 @@
+T9 Evidence: Multi-concern prompt validation
+=============================================
+Command: validateTaskScope({ prompt: "Fix the button alignment AND add a new API endpoint for user profiles" })
+Result:  { valid: false, concerns: ["Fix the button alignment", "add a new API endpoint for user profiles"], suggestion: "Split into 2 separate tasks. Each task should focus on one concern." }
+Expected: Multi-concern fails validation with detected concerns
+Status:  PASS
