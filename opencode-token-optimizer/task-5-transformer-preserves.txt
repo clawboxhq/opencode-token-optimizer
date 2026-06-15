@@ -1,0 +1,21 @@
+EVIDENCE: systemPromptTransformer — Original prompt preservation
+=================================================================
+
+Config: { precisePrompts: true, preComputationGuidance: true, cutExploreAgent: true }
+
+Input system: [
+  "You are a helpful assistant.",
+  "Follow the user's instructions carefully."
+]
+
+Output system after transform:
+------------------------------
+[0] "You are a helpful assistant."       ← PRESERVED
+[1] "Follow the user's instructions carefully."  ← PRESERVED
+[2] "<token_optimizer_guidance pattern="precisePrompts">..."
+[3] "<token_optimizer_guidance pattern="preComputationGuidance">..."
+[4] "<token_optimizer_guidance pattern="cutExploreAgent">..."
+
+Result: All original entries preserved at their original indices.
+Guidance blocks appended after.
+Original length: 2 → Final length: 5 (+3 blocks)

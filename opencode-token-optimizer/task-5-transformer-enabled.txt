@@ -1,0 +1,52 @@
+EVIDENCE: systemPromptTransformer — ALL patterns enabled
+=========================================================
+
+Config: { precisePrompts: true, preComputationGuidance: true, cutExploreAgent: true }
+
+Input system: ["> Original prompt"]
+
+Output system after transform:
+------------------------------
+[0] "> Original prompt"
+
+[1] "<token_optimizer_guidance pattern="precisePrompts">
+Before delegating work via task(), structure your prompt with:
+1) exact file paths & line ranges (src/auth.ts:45-78)
+2) specific function/variable names you need (function loginUser, interface UserDTO)
+3) concrete expected output format ("Return the type definition, not the implementation")
+4) ONE clear question per task
+
+GOOD task() prompt:
+"Find the auth middleware in src/middleware/auth.ts and add rate limiting (max 100 req/min) to it"
+
+BAD task() prompt:
+"Find all auth-related code and fix everything wrong with it"
+</token_optimizer_guidance>"
+
+[2] "<token_optimizer_guidance pattern="preComputationGuidance">
+Before spawning a subagent, first use grep, glob, or lsp tools to discover file locations yourself.
+Then pass exact paths to the subagent. This saves 40-60K tokens per delegation.
+
+Token cost comparison:
+- grep/glob/lsp for a symbol: ~0.5-2K tokens
+- explore agent to find the same symbol: ~40-60K tokens
+</token_optimizer_guidance>"
+
+[3] "<token_optimizer_guidance pattern="cutExploreAgent">
+Before calling task(subagent_type="explore", ...), ask:
+- "Can I answer this with grep, ast_grep_search, or lsp_find_references directly?"
+- "Is this a single-file question or cross-file synthesis?"
+- "Is the answer <20 lines of code?"
+
+Use explore agent ONLY for:
+- Cross-file synthesis (understanding how 5+ files connect)
+- Architecture narrative ("how does the auth flow work end-to-end?")
+- Open-ended investigation ("what could be causing this bug?")
+
+Use direct tools for:
+- "Where is X defined?" → lsp_find_references or ast_grep_search
+- "What functions are in file Y?" → ast_grep_search or grep
+- "Find all TODO/FIXME" → grep
+</token_optimizer_guidance>"
+
+Result: 3 guidance blocks appended. Original prompt preserved at index 0.

@@ -1,0 +1,12 @@
+EVIDENCE: systemPromptTransformer — ALL patterns disabled
+==========================================================
+
+Config: { precisePrompts: false, preComputationGuidance: false, cutExploreAgent: false }
+
+Input system: ["> Original prompt"]
+
+Output system after transform:
+------------------------------
+[0] "> Original prompt"
+
+Result: 0 guidance blocks appended. Warning logged: "[token-optimizer] systemPromptTransformer called but no transformer patterns are enabled"

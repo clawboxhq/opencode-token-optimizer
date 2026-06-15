@@ -36,10 +36,13 @@ const plugin: Plugin = async (_ctx) => {
     hooks["experimental.chat.system.transform"] = safeHook(
       "experimental.chat.system.transform",
       async (
-        _input: { sessionID?: string; model: Model },
-        _output: { system: string[] },
+        input: { sessionID?: string; model: Model },
+        output: { system: string[] },
       ) => {
-        // T5/T6/T7/T8 will implement system prompt modifications here
+        const { systemPromptTransformer } = await import(
+          "./patterns/system-prompt.js"
+        );
+        systemPromptTransformer(input, output, configManager.getConfig());
       },
     );
   }
